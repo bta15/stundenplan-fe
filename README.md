@@ -1,4 +1,5 @@
-# Tilgungsplan - Frontend
+# Stundenplan-Backend [ in Arbeit ]
+Hier entsteht ein stark vereinfachtes Stundenplan-Frontend, umgesetzt mit Angular 17/Typescript.
 
 ### Benutzerrollen
 
