@@ -4,6 +4,7 @@ import {MatIcon} from "@angular/material/icon";
 import {AuthService} from "../auth/auth-service";
 import {MatButton} from "@angular/material/button";
 import {Router} from "@angular/router";
+import {MatTooltip} from "@angular/material/tooltip";
 
 @Component({
   selector: 'stundenplan-header',
@@ -11,7 +12,8 @@ import {Router} from "@angular/router";
   imports: [
     MatToolbarModule,
     MatIcon,
-    MatButton
+    MatButton,
+    MatTooltip
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'

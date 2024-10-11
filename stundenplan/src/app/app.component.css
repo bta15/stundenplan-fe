@@ -1,3 +1,5 @@
-.app-margin {
+.app-layout {
   margin: 20px;
+  display: flex;
+  justify-content: center;
 }

@@ -1,10 +1,10 @@
 <mat-toolbar>
   <span>Stundenplan</span>
   <span class="spacer"></span>
-  <mat-icon>help</mat-icon>
+  <mat-icon matTooltip="Hilfe">help</mat-icon>
 
   <div>
-    <button mat-button class="btn" (click)="onLogout()">
+    <button mat-button class="btn" (click)="onLogout()" matTooltip="Abmelden">
       <mat-icon>logout</mat-icon>
     </button>
   </div>

@@ -6,6 +6,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
+import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
+import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-login',
@@ -16,13 +18,19 @@ import {MatOptionModule} from "@angular/material/core";
     MatFormFieldModule,
     MatSelectModule,
     MatOptionModule,
+    MatCard,
+    MatCardContent,
+    MatCardHeader,
+    MatCardTitle,
+    ReactiveFormsModule,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
 
-  selectedRolle!: Rolle;
+  // selectedRolle!: Rolle;
+  selectedRolleFormControl = new FormControl<Rolle | null>(null, Validators.required)
   rollen: Rolle[] = [{value: "verwalter", bezeichnung: "Verwalter"}, {value: "schule", bezeichnung: "Schule"}]
 
   constructor(private authService: AuthService, private router: Router) {
@@ -30,7 +38,7 @@ export class LoginComponent {
   }
 
   onLogin(): void {
-    switch (this.selectedRolle.value) {
+    switch (this.selectedRolleFormControl.getRawValue()?.value) {
       case "verwalter":
         this.authService.login("verwalter")
         this.router.navigate(["/management"])
