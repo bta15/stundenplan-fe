@@ -1,4 +1,4 @@
-# Stundenplan-Backend [ in Arbeit ]
+# Stundenplan-Frontend [ in Arbeit ]
 Hier entsteht ein stark vereinfachtes Stundenplan-Frontend, umgesetzt mit Angular 17/Typescript.
 
 ### Benutzerrollen
