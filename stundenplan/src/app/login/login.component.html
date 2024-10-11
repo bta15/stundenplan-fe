@@ -1,0 +1,18 @@
+<div>
+  <mat-form-field>
+    <mat-label>
+      Rolle auswählen
+    </mat-label>
+    <mat-select [(value)]="selectedRolle">
+      @for (rolle of rollen; track rolle) {
+        <mat-option [value]="rolle">{{rolle.bezeichnung}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+</div>
+<div>
+  <button mat-button class="btn" (click)="onLogin()">
+    <mat-icon>logout</mat-icon>
+    Anmelden
+  </button>
+</div>

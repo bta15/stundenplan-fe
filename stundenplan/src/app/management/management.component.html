@@ -1,0 +1,45 @@
+<mat-card appearance="outlined" class="cards-margin">
+  <mat-card-header>
+    <mat-card-title>Fächer verwalten</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    Hier werden Fächer verwaltet...
+  </mat-card-content>
+  <mat-card-actions>
+    <div>
+      <button mat-button class="btn" (click)="onAddFach()">
+        <mat-icon>add</mat-icon>
+        Fach hinzufügen
+      </button>
+    </div>
+    <div>
+      <button mat-button class="btn" (click)="onShowAllFachList()">
+        <mat-icon>view_list</mat-icon>
+        Fächer anzeigen
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Schulen verwalten</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    Hier werden Schulen verwaltet...
+  </mat-card-content>
+  <mat-card-actions>
+    <div>
+      <button mat-button class="btn" (click)="onAddSchule()">
+        <mat-icon>add</mat-icon>
+        Schule hinzufügen
+      </button>
+    </div>
+    <div>
+      <button mat-button class="btn" (click)="onShowAllSchuleList()">
+        <mat-icon>view_list</mat-icon>
+        Schulen anzeigen
+      </button>
+    </div>
+  </mat-card-actions>
+</mat-card>
