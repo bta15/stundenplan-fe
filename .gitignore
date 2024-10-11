@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 /stundenplan/.angular/
 /stundenplan/node_modules/
+/.idea/
