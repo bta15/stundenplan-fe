@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {MatButton} from "@angular/material/button";
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {MatIcon} from "@angular/material/icon";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-management',
@@ -19,12 +20,15 @@ import {MatIcon} from "@angular/material/icon";
   styleUrl: './management.component.css'
 })
 export class ManagementComponent {
+
+  constructor(private router: Router) {
+  }
   onAddFach(): void {
 
   }
 
   onShowAllFachList(): void {
-
+    this.router.navigate(["/fach"])
   }
 
   onAddSchule(): void {

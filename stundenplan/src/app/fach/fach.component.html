@@ -1,1 +1,15 @@
-<p>fach works!</p>
+<mat-card appearance="outlined">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" id="tabelle">
+      <ng-container matColumnDef="bezeichnung">
+        <th mat-header-cell *matHeaderCellDef>Fächer</th>
+        <td mat-cell *matCellDef="let element"> {{ element.bezeichnung }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</mat-card>
+
+
