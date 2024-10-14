@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'stundenplan-stundenplan-manager',
+  selector: 'stundenplan-plan-manager',
   standalone: true,
   imports: [],
   templateUrl: './stundenplan-manager.component.html',
