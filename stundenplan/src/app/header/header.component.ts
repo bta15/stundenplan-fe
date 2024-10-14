@@ -5,6 +5,7 @@ import {AuthService} from "../auth/auth.service";
 import {MatAnchor, MatButton, MatFabButton} from "@angular/material/button";
 import {Router} from "@angular/router";
 import {MatTooltip} from "@angular/material/tooltip";
+import {NavigationService} from "../service/navigation.service";
 
 @Component({
   selector: 'stundenplan-header',
@@ -22,7 +23,7 @@ import {MatTooltip} from "@angular/material/tooltip";
 })
 export class HeaderComponent {
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private router: Router, private navigationService: NavigationService) {
   }
 
   onLogout(): void {
@@ -31,17 +32,7 @@ export class HeaderComponent {
   }
 
   navigateToHome() {
-    switch (this.authService.getUserrole()) {
-      case "verwalter":
-        this.router.navigate(["/management"])
-        break
-      case "schule":
-        this.router.navigate(["/schule"])
-        break
-      default:
-        this.router.navigate(["login"])
-        break
-    }
+    this.navigationService.navigateToHome()
   }
 
 }

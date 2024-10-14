@@ -4,6 +4,7 @@ import {MatCardModule} from "@angular/material/card";
 import {HeaderComponent} from "./header/header.component";
 import {MatButton} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import {NavigationService} from "./service/navigation.service";
 
 @Component({
   selector: 'stundenplan-root',
@@ -14,6 +15,7 @@ import {MatIconModule} from "@angular/material/icon";
 })
 export class AppComponent {
 
-  constructor() {
+  constructor(private navigationService: NavigationService) {
+    this.navigationService.navigateToHome()
   }
 }

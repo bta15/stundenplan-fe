@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import {AuthService} from "../auth/auth.service";
-import {Router} from "@angular/router";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -8,6 +7,7 @@ import {MatSelectModule} from "@angular/material/select";
 import {MatOptionModule} from "@angular/material/core";
 import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
+import {NavigationService} from "../service/navigation.service";
 
 @Component({
   selector: 'stundenplan-login',
@@ -33,7 +33,7 @@ export class LoginComponent {
   selectedRolleFormControl = new FormControl<Rolle | null>(null, Validators.required)
   rollen: Rolle[] = [{value: "verwalter", bezeichnung: "Verwalter"}, {value: "schule", bezeichnung: "Schule"}]
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(private authService: AuthService, private navigationService: NavigationService) {
 
   }
 
@@ -41,13 +41,12 @@ export class LoginComponent {
     switch (this.selectedRolleFormControl.getRawValue()?.value) {
       case "verwalter":
         this.authService.login("verwalter")
-        this.router.navigate(["/management"])
         break
       case "schule":
         this.authService.login("schule")
-        this.router.navigate(["/schule"])
         break
     }
+    this.navigationService.navigateToHome();
   }
 }
 
