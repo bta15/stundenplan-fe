@@ -3,7 +3,6 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIcon} from "@angular/material/icon";
 import {AuthService} from "../auth/auth.service";
 import {MatAnchor, MatButton, MatFabButton} from "@angular/material/button";
-import {Router} from "@angular/router";
 import {MatTooltip} from "@angular/material/tooltip";
 import {NavigationService} from "../service/navigation.service";
 
@@ -23,12 +22,12 @@ import {NavigationService} from "../service/navigation.service";
 })
 export class HeaderComponent {
 
-  constructor(private authService: AuthService, private router: Router, private navigationService: NavigationService) {
+  constructor(private authService: AuthService, private navigationService: NavigationService) {
   }
 
   onLogout(): void {
     this.authService.logout()
-    this.router.navigate(["login"])
+    this.navigationService.navigateToLogin()
   }
 
   navigateToHome() {
