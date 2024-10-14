@@ -5,16 +5,16 @@ import {MatCardModule} from "@angular/material/card";
 import {MatTableDataSource, MatTableModule} from "@angular/material/table";
 
 @Component({
-  selector: 'stundenplan-fach',
+  selector: 'stundenplan-fach-list',
   standalone: true,
   imports: [
     MatCardModule,
     MatTableModule
   ],
-  templateUrl: './fach.component.html',
-  styleUrl: './fach.component.css'
+  templateUrl: './fach-list.component.html',
+  styleUrl: './fach-list.component.css'
 })
-export class FachComponent {
+export class FachListComponent {
   fachList!: FachResponse[];
   dataSource = new MatTableDataSource<FachResponse>(this.fachList);
   displayedColumns: string[] = ['bezeichnung'];

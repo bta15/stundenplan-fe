@@ -20,7 +20,7 @@ export class NavigationService {
         this.router.navigate(["management"])
         break
       case "schule":
-        this.router.navigate(["schule"])
+        this.router.navigate(["stundenplan-manager"])
         break
       default:
         this.router.navigate(["login"])
@@ -28,7 +28,11 @@ export class NavigationService {
     }
   }
 
-  navigateToFach(): void {
+  navigateToFachList(): void {
     this.router.navigate(["fach"])
+  }
+
+  navigateToSchuleList(): void {
+    this.router.navigate(["schule"])
   }
 }

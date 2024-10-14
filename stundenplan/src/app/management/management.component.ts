@@ -29,7 +29,7 @@ export class ManagementComponent {
   }
 
   onShowAllFachList(): void {
-    this.navigationService.navigateToFach()
+    this.navigationService.navigateToFachList()
   }
 
   onAddSchule(): void {
@@ -37,6 +37,6 @@ export class ManagementComponent {
   }
 
   onShowAllSchuleList(): void {
-
+    this.navigationService.navigateToSchuleList()
   }
 }
