@@ -5,7 +5,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatTableDataSource, MatTableModule} from "@angular/material/table";
 
 @Component({
-  selector: 'app-fach',
+  selector: 'stundenplan-fach',
   standalone: true,
   imports: [
     MatCardModule,

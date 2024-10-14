@@ -10,7 +10,7 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/mat
 import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'app-login',
+  selector: 'stundenplan-login',
   standalone: true,
   imports: [
     MatButtonModule,

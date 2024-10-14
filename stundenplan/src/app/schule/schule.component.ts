@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'app-schule',
+  selector: 'stundenplan-schule',
   standalone: true,
   imports: [],
   templateUrl: './schule.component.html',

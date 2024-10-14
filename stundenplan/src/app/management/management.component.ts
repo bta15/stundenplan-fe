@@ -5,7 +5,7 @@ import {MatIcon} from "@angular/material/icon";
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-management',
+  selector: 'stundenplan-management',
   standalone: true,
   imports: [
     MatButton,

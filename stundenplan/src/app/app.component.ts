@@ -6,7 +6,7 @@ import {MatButton} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 
 @Component({
-  selector: 'app-root',
+  selector: 'stundenplan-root',
   standalone: true,
   imports: [RouterOutlet, MatCardModule, MatIconModule, HeaderComponent, MatButton],
   templateUrl: './app.component.html',
