@@ -11,6 +11,10 @@ export class AuthService { //TODO später mit Backend umsetzen
     return !!localStorage.getItem("benutzerrolle")
   }
 
+  getUserrole(): string | null {
+    return localStorage.getItem("benutzerrolle")
+  }
+
   logout(): void {
     localStorage.removeItem("benutzerrolle")
   }

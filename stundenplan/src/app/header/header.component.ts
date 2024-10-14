@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIcon} from "@angular/material/icon";
 import {AuthService} from "../auth/auth.service";
-import {MatButton} from "@angular/material/button";
+import {MatAnchor, MatButton, MatFabButton} from "@angular/material/button";
 import {Router} from "@angular/router";
 import {MatTooltip} from "@angular/material/tooltip";
 
@@ -13,19 +13,35 @@ import {MatTooltip} from "@angular/material/tooltip";
     MatToolbarModule,
     MatIcon,
     MatButton,
-    MatTooltip
+    MatTooltip,
+    MatAnchor,
+    MatFabButton
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 
-  constructor(private authService: AuthService, private  router: Router) {
+  constructor(private authService: AuthService, private router: Router) {
   }
 
-  onLogout() {
+  onLogout(): void {
     this.authService.logout()
     this.router.navigate(["login"])
+  }
+
+  navigateToHome() {
+    switch (this.authService.getUserrole()) {
+      case "verwalter":
+        this.router.navigate(["/management"])
+        break
+      case "schule":
+        this.router.navigate(["/schule"])
+        break
+      default:
+        this.router.navigate(["login"])
+        break
+    }
   }
 
 }

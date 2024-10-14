@@ -1,5 +1,10 @@
 <mat-toolbar>
-  <span>Stundenplan</span>
+  <div>
+    <button mat-button (click)="navigateToHome()" class="stundenplan-size">
+      <mat-icon class="stundenplan-icon-size">school</mat-icon>
+      Stundenplan
+    </button>
+  </div>
   <span class="spacer"></span>
   <mat-icon matTooltip="Hilfe">help</mat-icon>
 
