@@ -17,7 +17,6 @@ import {NavigationService} from "../service/navigation.service";
     MatIcon
   ],
   templateUrl: './management.component.html',
-  styleUrl: './management.component.css'
 })
 export class ManagementComponent {
 

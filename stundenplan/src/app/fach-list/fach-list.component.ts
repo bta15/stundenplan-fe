@@ -12,7 +12,6 @@ import {MatTableDataSource, MatTableModule} from "@angular/material/table";
     MatTableModule
   ],
   templateUrl: './fach-list.component.html',
-  styleUrl: './fach-list.component.css'
 })
 export class FachListComponent {
   fachList!: FachResponse[];

@@ -18,7 +18,6 @@ import {NavigationService} from "../service/navigation.service";
     MatFabButton
   ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
 })
 export class HeaderComponent {
 

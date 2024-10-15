@@ -5,7 +5,6 @@ import {Component} from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './stundenplan-manager.component.html',
-  styleUrl: './stundenplan-manager.component.css'
 })
 export class StundenplanManagerComponent {
 

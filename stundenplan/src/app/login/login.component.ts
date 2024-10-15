@@ -25,7 +25,6 @@ import {NavigationService} from "../service/navigation.service";
     ReactiveFormsModule,
   ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
 })
 export class LoginComponent {
 
