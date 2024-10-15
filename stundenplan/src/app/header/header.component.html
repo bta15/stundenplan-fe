@@ -1,16 +1,16 @@
 <mat-toolbar>
   <div>
-    <button mat-button (click)="navigateToHome()" class="!text-2xl">
+    <button mat-button (click)="navigateToHome()" class="!text-2xl !text-blue-800">
       <mat-icon class="!text-3xl !h-8 !w-8">school</mat-icon>
       Stundenplan
     </button>
   </div>
   <span class="flex-auto"></span>
-  <mat-icon matTooltip="Hilfe">help</mat-icon>
+  <mat-icon class="!text-3xl !h-8 !w-8 !text-blue-800" matTooltip="Hilfe">help</mat-icon>
 
   <div>
-    <button mat-button class="btn" (click)="onLogout()" matTooltip="Abmelden">
-      <mat-icon>logout</mat-icon>
+    <button mat-button (click)="onLogout()" matTooltip="Abmelden">
+      <mat-icon class="!text-3xl !h-8 !w-8 !text-blue-800">logout</mat-icon>
     </button>
   </div>
 </mat-toolbar>

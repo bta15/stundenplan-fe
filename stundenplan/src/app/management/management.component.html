@@ -7,16 +7,10 @@
   </mat-card-content>
   <mat-card-actions>
     <div>
-      <button mat-button class="m-[5px] !bg-slate-400" (click)="onAddFach()">
-        <mat-icon>add</mat-icon>
-        Fach hinzufügen
-      </button>
+      <stundenplan-custom-button label="Fach hinzufügen" (onClick)="onAddFach()" icon="add"/>
     </div>
     <div>
-      <button mat-button class="m-[5px] !bg-slate-400" (click)="onShowAllFachList()">
-        <mat-icon>view_list</mat-icon>
-        Fächer anzeigen
-      </button>
+      <stundenplan-custom-button label="Fächer anzeigen" (onClick)="onShowAllFachList()" icon="view_list"/>
     </div>
   </mat-card-actions>
 </mat-card>
@@ -30,16 +24,10 @@
   </mat-card-content>
   <mat-card-actions>
     <div>
-      <button mat-button class="m-[5px] !bg-slate-400" (click)="onAddSchule()">
-        <mat-icon>add</mat-icon>
-        Schule hinzufügen
-      </button>
+      <stundenplan-custom-button label="Schule hinzufügen" (onClick)="onAddSchule()" icon="add"/>
     </div>
     <div>
-      <button mat-button class="m-[5px] !bg-slate-400" (click)="onShowAllSchuleList()">
-        <mat-icon>view_list</mat-icon>
-        Schulen anzeigen
-      </button>
+      <stundenplan-custom-button label="Schulen anzeigen" (onClick)="onShowAllSchuleList()" icon="view_list"/>
     </div>
   </mat-card-actions>
 </mat-card>
