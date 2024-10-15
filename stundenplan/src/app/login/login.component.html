@@ -10,20 +10,17 @@
         </mat-label>
         <mat-select required [formControl]="selectedRolleFormControl">
           @for (rolle of rollen; track rolle) {
-            <mat-option [value]="rolle">{{rolle.bezeichnung}}</mat-option>
+            <mat-option [value]="rolle">{{ rolle.bezeichnung }}</mat-option>
           }
         </mat-select>
         <mat-hint></mat-hint>
-        @if(!selectedRolleFormControl.hasError("required")) {
+        @if (!selectedRolleFormControl.hasError("required")) {
           <mat-error>Bitte eine Rolle auswählen</mat-error>
         }
       </mat-form-field>
     </div>
-    <div>
-      <button mat-button class="btn" (click)="onLogin()">
-        <mat-icon>logout</mat-icon>
-        Anmelden
-      </button>
+    <div class="flex justify-center">
+      <stundenplan-custom-button label="Anmelden" (onClick)="onLogin()"/>
     </div>
 
   </mat-card-content>
