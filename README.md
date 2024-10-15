@@ -8,7 +8,7 @@ Hier entsteht ein stark vereinfachtes Stundenplan-Frontend, umgesetzt mit Angula
 
 ### TODOs
 
-- [ ] mit Backend kommunizieren
+- [x] mit Backend kommunizieren
 - [ ] Auth mit dem Backend machen anstelle des locale storage
 - [ ] Tests
 - [ ] erstellen von

@@ -11,7 +11,6 @@ import {NavigationService} from "./service/navigation.service";
   standalone: true,
   imports: [RouterOutlet, MatCardModule, MatIconModule, HeaderComponent, MatButton],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
 
