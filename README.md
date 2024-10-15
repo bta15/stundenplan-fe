@@ -11,13 +11,20 @@ Hier entsteht ein stark vereinfachtes Stundenplan-Frontend, umgesetzt mit Angula
 - [x] mit Backend kommunizieren
 - [ ] Auth mit dem Backend machen anstelle des locale storage
 - [ ] Tests
+- [ ] Dialog stylen
+- [ ] Tabelle stylen (hover, Aktionen pro Zeile, ...)
 - [ ] erstellen von
-    - Fächern
-    - Schulen
-    - Klassen
-    - ....
+  - [x] Fächern
+  - Schulen
+  - Klassen
+  - ....
+- [ ] löschen von
+  - Fächern
+  - Schulen
+  - Klassen
+  - ....
 ### Offene technische Ideen
-- bootstrap oder tailwind
+- [x] bootstrap oder tailwind
 - cypress
 - richtiges Login mit Passwort
 - Stundenplan als PDF downloaden

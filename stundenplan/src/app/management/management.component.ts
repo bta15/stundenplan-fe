@@ -25,16 +25,8 @@ export class ManagementComponent {
   constructor(private navigationService: NavigationService) {
   }
 
-  onAddFach(): void {
-
-  }
-
   onShowAllFachList(): void {
     this.navigationService.navigateToFachList()
-  }
-
-  onAddSchule(): void {
-
   }
 
   onShowAllSchuleList(): void {
