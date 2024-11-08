@@ -25,7 +25,6 @@ export class FachListComponent {
   dataSource = new MatTableDataSource<Fach>(this.fachList);
   displayedColumns: string[] = ['bezeichnung'];
 
-  // readonly dialog = inject(MatDialog)
 
   constructor(private fachService: FachService, private dialog: MatDialog) {
     this.reloadTableData()
