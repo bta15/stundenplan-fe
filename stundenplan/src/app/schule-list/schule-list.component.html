@@ -1,1 +1,14 @@
 <p>schule list works!</p>
+<mat-card appearance="outlined" class="w-[400px]">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" id="tabelle">
+      <ng-container matColumnDef="schulname">
+        <th mat-header-cell *matHeaderCellDef>Schulname</th>
+        <td mat-cell *matCellDef="let element"> {{ element.schulname }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</mat-card>
