@@ -7,9 +7,12 @@ import {
   MatHeaderCell,
   MatHeaderRow,
   MatHeaderRowDef,
-  MatRow, MatRowDef, MatTable, MatTableDataSource, MatTableModule
+  MatRow,
+  MatRowDef,
+  MatTable,
+  MatTableDataSource,
+  MatTableModule
 } from "@angular/material/table";
-import {Fach} from "../model/fach";
 import {Schule} from "../model/schule";
 import {SchuleService} from "../service/schule.service";
 import {MatDialogModule} from "@angular/material/dialog";
