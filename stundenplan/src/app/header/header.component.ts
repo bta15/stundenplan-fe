@@ -5,7 +5,7 @@ import {AuthService} from "../auth/auth.service";
 import {MatAnchor, MatButton, MatFabButton} from "@angular/material/button";
 import {MatTooltip} from "@angular/material/tooltip";
 import {NavigationService} from "../service/navigation.service";
-import {CustomButton} from "../shared/custom-button.component";
+import {CustomButtonComponent} from "../shared/button/custom-button.component";
 
 @Component({
   selector: 'stundenplan-header',
@@ -17,7 +17,7 @@ import {CustomButton} from "../shared/custom-button.component";
     MatTooltip,
     MatAnchor,
     MatFabButton,
-    CustomButton
+    CustomButtonComponent
   ],
   templateUrl: './header.component.html',
 })

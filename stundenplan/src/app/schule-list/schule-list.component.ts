@@ -16,8 +16,8 @@ import {
 import {Schule} from "../model/schule";
 import {SchuleService} from "../service/schule.service";
 import {MatDialogModule} from "@angular/material/dialog";
-import {CustomButton} from "../shared/custom-button.component";
-import {CustomDialog} from "../shared/dialog/custom-dialog.component";
+import {CustomButtonComponent} from "../shared/button/custom-button.component";
+import {CustomDialogComponent} from "../shared/dialog/custom-dialog.component";
 
 @Component({
   selector: 'stundenplan-schule-list',
@@ -36,8 +36,8 @@ import {CustomDialog} from "../shared/dialog/custom-dialog.component";
     MatCardModule,
     MatTableModule,
     MatDialogModule,
-    CustomButton,
-    CustomDialog
+    CustomButtonComponent,
+    CustomDialogComponent
   ],
   templateUrl: './schule-list.component.html',
 })

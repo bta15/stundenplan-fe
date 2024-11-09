@@ -3,8 +3,8 @@ import {FachService} from "../service/fach.service";
 import {Fach} from "../model/fach";
 import {MatCardModule} from "@angular/material/card";
 import {MatTableDataSource, MatTableModule} from "@angular/material/table";
-import {CustomButton} from "../shared/custom-button.component";
-import {CustomDialog} from "../shared/dialog/custom-dialog.component";
+import {CustomButtonComponent} from "../shared/button/custom-button.component";
+import {CustomDialogComponent} from "../shared/dialog/custom-dialog.component";
 import {MatDialog, MatDialogModule} from "@angular/material/dialog";
 import {AddFachDialogComponent} from "./add-fach-dialog.component";
 
@@ -15,8 +15,8 @@ import {AddFachDialogComponent} from "./add-fach-dialog.component";
     MatCardModule,
     MatTableModule,
     MatDialogModule,
-    CustomButton,
-    CustomDialog
+    CustomButtonComponent,
+    CustomDialogComponent
   ],
   templateUrl: './fach-list.component.html',
 })
@@ -33,7 +33,7 @@ export class FachListComponent {
     const dialogRef = this.dialog.open(AddFachDialogComponent, {
       data: {dialogTitle: "Neues Fach hinzufügen"}
     });
-    dialogRef.afterClosed().subscribe( result => {
+    dialogRef.afterClosed().subscribe( () => {
       this.reloadTableData()
     })
   }

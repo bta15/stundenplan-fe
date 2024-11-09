@@ -10,7 +10,7 @@ import {
   MatDialogTitle
 } from "@angular/material/dialog";
 import {MatFormFieldModule} from "@angular/material/form-field";
-import {CustomButton} from "../custom-button.component";
+import {CustomButtonComponent} from "../button/custom-button.component";
 import {DialogData} from "../../fach-list/fach-list.component";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
@@ -28,23 +28,23 @@ import {FormsModule} from "@angular/forms";
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    CustomButton
+    CustomButtonComponent
   ],
   templateUrl: './custom-dialog.component.html',
 })
-export class CustomDialog {
+export class CustomDialogComponent {
 
   dialogTitle!: string;
 
-  constructor(private dialogRef: MatDialogRef<CustomDialog>,
+  constructor(private dialogRef: MatDialogRef<CustomDialogComponent>,
               @Inject(MAT_DIALOG_DATA) data: DialogData) {
     this.dialogTitle = data.dialogTitle
   }
 
-  @Output() onClickOk: EventEmitter<any> = new EventEmitter<any>();
+  @Output() clickOk: EventEmitter<Event> = new EventEmitter<Event>();
 
-  ok(event: any) {
-    this.onClickOk.next(event)
+  ok(event: Event) {
+    this.clickOk.next(event)
     this.dialogRef.close()
   }
 

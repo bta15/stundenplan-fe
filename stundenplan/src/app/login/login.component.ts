@@ -6,7 +6,7 @@ import {MatOptionModule} from "@angular/material/core";
 import {MatCard, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {FormControl, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NavigationService} from "../service/navigation.service";
-import {CustomButton} from "../shared/custom-button.component";
+import {CustomButtonComponent} from "../shared/button/custom-button.component";
 
 @Component({
   selector: 'stundenplan-login',
@@ -20,7 +20,7 @@ import {CustomButton} from "../shared/custom-button.component";
     MatCardHeader,
     MatCardTitle,
     ReactiveFormsModule,
-    CustomButton,
+    CustomButtonComponent,
   ],
   templateUrl: './login.component.html',
 })

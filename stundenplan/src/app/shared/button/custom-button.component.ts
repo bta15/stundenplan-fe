@@ -11,14 +11,14 @@ import {MatIcon} from "@angular/material/icon";
   ],
   templateUrl: './custom-button.component.html',
 })
-export class CustomButton {
+export class CustomButtonComponent {
 
   @Input() label !: string;
   @Input() icon !: string;
-  @Output() onClick: EventEmitter<any> = new EventEmitter<any>();
+  @Output() btnClick: EventEmitter<Event> = new EventEmitter<Event>();
 
-  onClickButton(event: any) {
-    this.onClick.next(event)
+  onClickButton(event: Event) {
+    this.btnClick.next(event)
   }
 
 }

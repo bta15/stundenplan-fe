@@ -1,7 +1,7 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {DialogData} from "./fach-list.component";
-import {CustomDialog} from "../shared/dialog/custom-dialog.component";
+import {CustomDialogComponent} from "../shared/dialog/custom-dialog.component";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
@@ -11,7 +11,7 @@ import {FachService} from "../service/fach.service";
   selector: 'stundenplan-add-fach',
   standalone: true,
   imports: [
-    CustomDialog,
+    CustomDialogComponent,
     MatFormFieldModule,
     MatInputModule,
     FormsModule
@@ -22,7 +22,7 @@ export class AddFachDialogComponent {
   dialogTitle!: string;
   fachBezeichnung!: string;
 
-  constructor(private dialogRef: MatDialogRef<CustomDialog>,
+  constructor(private dialogRef: MatDialogRef<CustomDialogComponent>,
               @Inject(MAT_DIALOG_DATA) data: DialogData,
               private fachService: FachService) {
     this.dialogTitle = data.dialogTitle

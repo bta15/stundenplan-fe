@@ -3,7 +3,7 @@ import {MatButton} from "@angular/material/button";
 import {MatCard, MatCardActions, MatCardContent, MatCardHeader, MatCardTitle} from "@angular/material/card";
 import {MatIcon} from "@angular/material/icon";
 import {NavigationService} from "../service/navigation.service";
-import {CustomButton} from "../shared/custom-button.component";
+import {CustomButtonComponent} from "../shared/button/custom-button.component";
 
 @Component({
   selector: 'stundenplan-management',
@@ -16,7 +16,7 @@ import {CustomButton} from "../shared/custom-button.component";
     MatCardHeader,
     MatCardTitle,
     MatIcon,
-    CustomButton
+    CustomButtonComponent
   ],
   templateUrl: './management.component.html',
 })

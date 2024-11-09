@@ -1,6 +1,14 @@
 # Stundenplan-Frontend [ in Arbeit ]
 Hier entsteht ein stark vereinfachtes Stundenplan-Frontend, umgesetzt mit Angular 17/Typescript.
 
+### Technische Hinweise
+#### Projetk starten
+- im Backend ```StundenplanApplication.kt``` starten (Backend: https://github.com/bta15/stundenplan-be-spring-kotlin)
+- im Frontend zu ```/stundenplan``` navigieren und im Terminal ```ng serve``` eingeben
+
+#### ESLint:
+- eslint laufen lassen: ``` npm run lint ```
+
 ### Benutzerrollen
 
 - Verwalter: Kann Schulen und Fächer erstellen (eine Art Admin)
