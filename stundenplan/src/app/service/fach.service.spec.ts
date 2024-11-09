@@ -1,38 +1,38 @@
 import {TestBed} from "@angular/core/testing";
 import {HttpClientTestingModule, HttpTestingController,} from "@angular/common/http/testing";
-import {SchuleService} from "./schule.service";
-import {Schule} from "../model/schule";
+import {FachService} from "./fach.service";
+import {Fach} from "../model/fach";
 
-describe("SchuleService-Test", () => {
-  let schuleService: SchuleService;
+describe("FachService-Test", () => {
+  let fachService: FachService;
   let httpTestingController: HttpTestingController;
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [SchuleService],
+      providers: [FachService],
     });
 
-    schuleService = TestBed.inject(SchuleService);
+    fachService = TestBed.inject(FachService);
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 
   it("service should have created successfully", () => {
-    expect(schuleService).toBeTruthy();
+    expect(fachService).toBeTruthy();
   });
 
   it("Should retrieve all Schulen function", () => {
-    schuleService.getAllSchulen().subscribe(schulen => {
-      expect(schulen).toBeTruthy();
-      expect(schulen.length).toEqual(1);
+    fachService.getFachList().subscribe(fachList => {
+      expect(fachList).toBeTruthy();
+      expect(fachList.length).toEqual(1);
     });
-    const apiReq = httpTestingController.expectOne('http://localhost:8082/schule');
+    const apiReq = httpTestingController.expectOne('http://localhost:8082/fach');
     expect(apiReq.cancelled).toBeFalsy();
     expect(apiReq.request.method).toBe("GET");
     expect(apiReq.request.responseType).toBe('json');
-    const schulen: Schule[] = [
-      {schulname: "Schule 123"} as Schule
+    const fachList: Fach[] = [
+      {bezeichnung: "Deutsch"} as Fach
     ]
-    apiReq.flush(schulen);
+    apiReq.flush(fachList);
   });
 
   //TODO Test für Fehlerfall implementieren
