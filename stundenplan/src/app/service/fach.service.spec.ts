@@ -20,7 +20,7 @@ describe("FachService-Test", () => {
     expect(fachService).toBeTruthy();
   });
 
-  it("Should retrieve all Schulen function", () => {
+  it("Should retrieve all Fächer", () => {
     fachService.getFachList().subscribe(fachList => {
       expect(fachList).toBeTruthy();
       expect(fachList.length).toEqual(1);

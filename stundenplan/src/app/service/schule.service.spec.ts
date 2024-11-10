@@ -20,7 +20,7 @@ describe("SchuleService-Test", () => {
     expect(schuleService).toBeTruthy();
   });
 
-  it("Should retrieve all Schulen function", () => {
+  it("Should retrieve all Schulen", () => {
     schuleService.getAllSchulen().subscribe(schulen => {
       expect(schulen).toBeTruthy();
       expect(schulen.length).toEqual(1);
